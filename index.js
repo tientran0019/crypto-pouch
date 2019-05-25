@@ -15,7 +15,7 @@ function cryptoInit(password, options) {
   var db = this;
   var key, cb;
   var turnedOff = false;
-  var ignore = ['_id', '_rev', '_deleted']
+  var ignore = ['_id', '_rev', '_deleted', '_revisions']
   if (!options) {
     options = {};
   }
