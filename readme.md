@@ -1,3 +1,12 @@
+About Fork
+-------
+- **Fix bug: After encrypting, Data cannot be synchronized when updating by `put` method.**
+
+  All `get/query` requests are done with the localdb and all `put/post` requests are done with remoteDB.
+
+  I had to modify crypto pouch index.js file, to add '_revisions' to ignore variable 
+(line 18 `var ignore = ['_id', '_rev', '_deleted','_revisions']`) otherwise localDB will not handle pull changes. 
+
 crypto pouch [![Build Status](https://travis-ci.org/calvinmetcalf/crypto-pouch.svg)](https://travis-ci.org/calvinmetcalf/crypto-pouch)
 ===
 
